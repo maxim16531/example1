@@ -10,8 +10,10 @@ var server = app.listen(8082, function () {
   var port = server.address().port
   console.log("Example app listening at %s:%s Port", host, port)
 });
- 
- 
+app.get('/', function (req,res) {
+    var html='<h1 style="color:red">Привет<h1>'
+    res.send(html);
+});
 app.get('/form', function (req, res) {
   var html='';
   html +="<body>";
